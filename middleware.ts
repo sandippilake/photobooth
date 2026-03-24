@@ -16,6 +16,7 @@ export async function middleware(request: NextRequest) {
   if (pathname.startsWith('/_next'))      return NextResponse.next()
   if (pathname.startsWith('/api'))        return NextResponse.next()
   if (pathname.startsWith('/bg-remover')) return NextResponse.next()
+  if (pathname.startsWith('/frame-converter')) return NextResponse.next()
   if (pathname === '/favicon.ico')        return NextResponse.next()
 
   const raw = request.cookies.get('pb_session')?.value
