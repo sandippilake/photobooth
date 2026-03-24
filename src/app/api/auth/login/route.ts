@@ -8,7 +8,6 @@ const DIRECTUS_URL = process.env.NEXT_PUBLIC_DIRECTUS_URL!
 export async function POST(request: NextRequest) {
   try {
     const { email, password } = await request.json()
-
     if (!email || !password) {
       return NextResponse.json({ error: 'Email and password required' }, { status: 400 })
     }
@@ -38,7 +37,6 @@ export async function POST(request: NextRequest) {
 
     const user = users[0]
     const valid = await bcrypt.compare(password, user.password_hash)
-
     if (!valid) {
       return NextResponse.json({ error: 'Invalid email or password' }, { status: 401 })
     }
@@ -48,12 +46,11 @@ export async function POST(request: NextRequest) {
       email: user.email,
       name: user.name,
       role: user.role,
-      agent_id: user.agent_id,
+      referring_agent_id: user.referring_agent_id ?? null,
       token: adminToken,
     })
 
     await setSessionCookie(sessionToken)
-
     return NextResponse.json({ ok: true, role: user.role })
   } catch (err) {
     console.error('Login error:', err)

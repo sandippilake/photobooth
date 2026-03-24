@@ -6,7 +6,7 @@ export interface SessionUser {
   email: string
   name: string
   role: 'admin' | 'agent' | 'client'
-  agent_id: string | null
+  referring_agent_id: string | null
 }
 
 export function useSession() {

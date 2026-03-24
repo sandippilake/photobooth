@@ -6,8 +6,9 @@ import { UserRole } from '@/types'
 
 const NAV_ITEMS: Record<UserRole, { label: string; href: string }[]> = {
   admin: [
-    { label: 'Agents', href: '/admin/agents' },
-    { label: 'Frames', href: '/admin/frames' },
+    { label: 'Agents',   href: '/admin/agents' },
+    { label: 'Packages', href: '/admin/packages' },
+    { label: 'Frames',   href: '/admin/frames' },
   ],
   agent: [
     { label: 'Clients', href: '/agent/clients' },
@@ -30,15 +31,7 @@ const ROLE_COLORS: Record<UserRole, string> = {
   client: 'bg-blue-100 text-blue-700',
 }
 
-export default function Sidebar({
-  role,
-  name,
-  email,
-}: {
-  role: UserRole
-  name: string
-  email: string
-}) {
+export default function Sidebar({ role, name, email }: { role: UserRole; name: string; email: string }) {
   const pathname = usePathname()
   const items = NAV_ITEMS[role]
 
@@ -57,16 +50,13 @@ export default function Sidebar({
       </div>
       <nav className="flex-1 p-3 space-y-1">
         {items.map(item => (
-          <Link
-            key={item.href}
-            href={item.href}
+          <Link key={item.href} href={item.href}
             className={cn(
               'block px-3 py-2 rounded-lg text-sm font-medium transition-colors',
               pathname.startsWith(item.href)
                 ? 'bg-blue-50 text-blue-700'
                 : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
-            )}
-          >
+            )}>
             {item.label}
           </Link>
         ))}
@@ -76,10 +66,8 @@ export default function Sidebar({
           <p className="text-sm font-medium text-gray-900 truncate">{name}</p>
           <p className="text-xs text-gray-500 truncate">{email}</p>
         </div>
-        <button
-          onClick={handleLogout}
-          className="w-full text-left px-3 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg transition-colors"
-        >
+        <button onClick={handleLogout}
+          className="w-full text-left px-3 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg transition-colors">
           Sign out
         </button>
       </div>

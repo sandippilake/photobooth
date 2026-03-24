@@ -5,6 +5,6 @@ export interface SessionUser {
   email: string
   name: string
   role: UserRole
-  agent_id: string | null
+  referring_agent_id: string | null
   token: string
 }

@@ -43,8 +43,8 @@ interface EventFrame {
 }
 
 interface Quota {
-  allocated_uses: number
-  used_uses: number
+  usages_total: number
+  usages_used: number
   valid_until: string | null
 }
 
@@ -84,7 +84,7 @@ export default function EventsClient({ token, clientId }: { token: string; clien
         fetch(`${DIRECTUS_URL}/items/events?filter[client_id][_eq]=${clientId}&sort=-created_at&fields=id,name,description,tagline,thanks_message,slug,pin,is_active,storage_enabled,created_at`, {
           headers: { Authorization: `Bearer ${token}` }
         }),
-        fetch(`${DIRECTUS_URL}/items/client_quota_allocations?filter[client_id][_eq]=${clientId}`, {
+        fetch('/api/client/quota'),  // dummy — replaced below
           headers: { Authorization: `Bearer ${token}` }
         }),
         fetch(`${DIRECTUS_URL}/items/frames?filter[is_global][_eq]=true&sort=name&fields=id,name,png_url,thumbnail_url,placeholder_schema`, {
@@ -93,7 +93,7 @@ export default function EventsClient({ token, clientId }: { token: string; clien
       ])
       const [eventsData, quotaData, framesData] = await Promise.all([eventsRes.json(), quotaRes.json(), framesRes.json()])
       setEvents(eventsData.data || [])
-      setQuota(quotaData.data?.[0] || null)
+      setQuota(quotaData || null)
       setGalleryFrames(framesData.data || [])
     } catch (e) { console.error(e) }
     setLoading(false)
@@ -249,9 +249,9 @@ export default function EventsClient({ token, clientId }: { token: string; clien
       {quota && (
         <div className="grid grid-cols-3 gap-4 mb-6">
           {[
-            { label: 'Total uses', value: quota.allocated_uses },
-            { label: 'Used', value: quota.used_uses },
-            { label: 'Remaining', value: quota.allocated_uses - quota.used_uses },
+            { label: 'Total uses', value: quota.usages_total },
+            { label: 'Used', value: quota.usages_used },
+            { label: 'Remaining', value: quota.usages_total - quota.usages_used },
           ].map(stat => (
             <div key={stat.label} className="bg-white border border-gray-200 rounded-xl p-4">
               <p className="text-sm text-gray-500">{stat.label}</p>

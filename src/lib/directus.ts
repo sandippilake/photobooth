@@ -7,27 +7,8 @@ export interface DirectusUser {
   email: string
   name: string
   role: UserRole
-  agent_id: string | null
+  referring_agent_id: string | null
   is_active: boolean
-  created_at: string
-}
-
-export interface AgentQuotaPool {
-  id: string
-  agent_id: string
-  total_purchased: number
-  total_allocated: number
-  total_used: number
-  updated_at: string
-}
-
-export interface ClientQuotaAllocation {
-  id: string
-  client_id: string
-  agent_id: string
-  allocated_uses: number
-  used_uses: number
-  valid_until: string | null
   created_at: string
 }
 

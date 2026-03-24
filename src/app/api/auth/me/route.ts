@@ -6,11 +6,11 @@ export async function GET() {
   if (!session) return NextResponse.json({ user: null }, { status: 401 })
   return NextResponse.json({
     user: {
-      id:       session.id,
-      email:    session.email,
-      name:     session.name,
-      role:     session.role,
-      agent_id: session.agent_id ?? null,
+      id:                 session.id,
+      email:              session.email,
+      name:               session.name,
+      role:               session.role,
+      referring_agent_id: session.referring_agent_id ?? null,
     }
   })
 }
