@@ -7,6 +7,7 @@ import { UserRole } from '@/types'
 const NAV_ITEMS: Record<UserRole, { label: string; href: string }[]> = {
   admin: [
     { label: 'Agents',   href: '/admin/agents' },
+    { label: 'Clients',  href: '/admin/clients' },
     { label: 'Packages', href: '/admin/packages' },
     { label: 'Frames',   href: '/admin/frames' },
   ],
