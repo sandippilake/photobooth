@@ -1,4 +1,9 @@
+import { getSession } from '@/lib/auth'
 import { redirect } from 'next/navigation'
-export default function AdminFramesRedirect() {
-  redirect('/manage/frames')
+import AdminFramesClient from './AdminFramesClient'
+
+export default async function AdminFramesPage() {
+  const session = await getSession()
+  if (!session || session.role !== 'admin') redirect('/login')
+  return <AdminFramesClient token={session.token} />
 }

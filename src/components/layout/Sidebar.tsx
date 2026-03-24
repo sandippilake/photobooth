@@ -1,5 +1,4 @@
 'use client'
-
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
@@ -7,11 +6,11 @@ import { UserRole } from '@/types'
 
 const NAV_ITEMS: Record<UserRole, { label: string; href: string }[]> = {
   admin: [
-    { label: 'Agents', href: '/manage/agents' },
-    { label: 'Frames', href: '/manage/frames' },
+    { label: 'Agents', href: '/admin/agents' },
+    { label: 'Frames', href: '/admin/frames' },
   ],
   agent: [
-    { label: 'Clients', href: '/manage/clients' },
+    { label: 'Clients', href: '/agent/clients' },
   ],
   client: [
     { label: 'Events', href: '/client/events' },
@@ -56,7 +55,6 @@ export default function Sidebar({
           {ROLE_LABELS[role]}
         </span>
       </div>
-
       <nav className="flex-1 p-3 space-y-1">
         {items.map(item => (
           <Link
@@ -64,7 +62,7 @@ export default function Sidebar({
             href={item.href}
             className={cn(
               'block px-3 py-2 rounded-lg text-sm font-medium transition-colors',
-              pathname === item.href
+              pathname.startsWith(item.href)
                 ? 'bg-blue-50 text-blue-700'
                 : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
             )}
@@ -73,7 +71,6 @@ export default function Sidebar({
           </Link>
         ))}
       </nav>
-
       <div className="p-3 border-t border-gray-100">
         <div className="px-3 py-2 mb-1">
           <p className="text-sm font-medium text-gray-900 truncate">{name}</p>

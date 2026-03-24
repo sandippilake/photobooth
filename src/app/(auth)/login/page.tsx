@@ -28,8 +28,8 @@ export default function LoginPage() {
     }
 
     // Redirect to correct dashboard based on role
-    if (data.role === 'admin')       window.location.href = '/manage/agents'
-    else if (data.role === 'agent')  window.location.href = '/manage/clients'
+    if (data.role === 'admin')       window.location.href = '/admin/agents'
+    else if (data.role === 'agent')  window.location.href = '/agent/clients'
     else if (data.role === 'client') window.location.href = '/client/events'
     else window.location.href = '/'
   }
