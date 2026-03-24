@@ -1,0 +1,88 @@
+import { NextRequest, NextResponse } from 'next/server'
+import { createDirectus, rest, readItems, updateItem, createItem, staticToken } from '@directus/sdk'
+
+const DIRECTUS_URL = process.env.NEXT_PUBLIC_DIRECTUS_URL!
+
+async function getAdminToken() {
+  const res = await fetch(`${DIRECTUS_URL}/auth/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      email: process.env.DIRECTUS_ADMIN_EMAIL,
+      password: process.env.DIRECTUS_ADMIN_PASSWORD,
+    }),
+  })
+  const data = await res.json()
+  return data.data?.access_token
+}
+
+function hashIp(ip: string): string {
+  let hash = 0
+  for (let i = 0; i < ip.length; i++) {
+    const char = ip.charCodeAt(i)
+    hash = ((hash << 5) - hash) + char
+    hash = hash & hash
+  }
+  return Math.abs(hash).toString(36)
+}
+
+export async function POST(request: NextRequest) {
+  try {
+    const { eventId, action, guest } = await request.json()
+    if (!eventId || !action) return NextResponse.json({ error: 'Missing fields' }, { status: 400 })
+
+    const token = await getAdminToken()
+    const client = createDirectus(DIRECTUS_URL).with(staticToken(token)).with(rest())
+
+    const events = await client.request(readItems('events' as never, {
+      filter: { id: { _eq: eventId } },
+      limit: 1,
+    })) as any[]
+
+    if (!events.length) return NextResponse.json({ error: 'Event not found' }, { status: 404 })
+    const event = events[0]
+
+    const allocations = await client.request(readItems('client_quota_allocations' as never, {
+      filter: { client_id: { _eq: event.client_id } },
+      limit: 1,
+    })) as any[]
+
+    if (allocations.length) {
+      const alloc = allocations[0]
+      if (alloc.used_uses >= alloc.allocated_uses) {
+        return NextResponse.json({ error: 'Quota exceeded' }, { status: 403 })
+      }
+      await client.request(updateItem('client_quota_allocations' as never, alloc.id, {
+        used_uses: alloc.used_uses + 1,
+      } as never))
+
+      const pools = await client.request(readItems('agent_quota_pools' as never, {
+        filter: { agent_id: { _eq: alloc.agent_id } },
+        limit: 1,
+      })) as any[]
+
+      if (pools.length) {
+        await client.request(updateItem('agent_quota_pools' as never, pools[0].id, {
+          total_used: pools[0].total_used + 1,
+        } as never))
+      }
+    }
+
+    const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown'
+
+    await client.request(createItem('usage_logs' as never, {
+      event_id: eventId,
+      client_id: event.client_id,
+      action,
+      ip_hash: hashIp(ip),
+      guest_name: guest?.name || null,
+      guest_phone: guest?.phone || null,
+      guest_message: guest?.message || null,
+    } as never))
+
+    return NextResponse.json({ ok: true })
+  } catch (err) {
+    console.error('Log error:', err)
+    return NextResponse.json({ error: 'Failed to log' }, { status: 500 })
+  }
+}

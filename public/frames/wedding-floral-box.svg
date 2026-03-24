@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 600" width="390" height="600">
+  <!-- Outer border -->
+  <rect x="0" y="0" width="390" height="600" fill="none" stroke="#b8860b" stroke-width="3"/>
+  <rect x="5" y="5" width="380" height="590" fill="none" stroke="#daa520" stroke-width="1"/>
+  <rect x="8" y="8" width="374" height="584" fill="none" stroke="#b8860b" stroke-width="0.5"/>
+
+  <!-- Top bar background -->
+  <rect x="0" y="0" width="390" height="72" fill="#1a0a00" opacity="0.82"/>
+  <rect x="0" y="70" width="390" height="2" fill="#daa520"/>
+
+  <!-- Bottom bar background -->
+  <rect x="0" y="528" width="390" height="72" fill="#1a0a00" opacity="0.82"/>
+  <rect x="0" y="528" width="390" height="2" fill="#daa520"/>
+
+  <!-- Left bar -->
+  <rect x="0" y="72" width="28" height="456" fill="#1a0a00" opacity="0.75"/>
+  <rect x="26" y="72" width="2" height="456" fill="#daa520"/>
+
+  <!-- Right bar -->
+  <rect x="362" y="72" width="28" height="456" fill="#1a0a00" opacity="0.75"/>
+  <rect x="362" y="72" width="2" height="456" fill="#daa520"/>
+
+  <!-- Top floral decoration -->
+  <!-- Center rose -->
+  <g transform="translate(195, 36)">
+    <circle r="14" fill="#8b1a1a"/>
+    <circle r="10" fill="#a52a2a"/>
+    <circle r="6" fill="#cd5c5c"/>
+    <circle r="3" fill="#ffb6c1"/>
+    <!-- petals -->
+    <ellipse rx="5" ry="9" transform="rotate(0)" fill="#8b1a1a" opacity="0.7"/>
+    <ellipse rx="5" ry="9" transform="rotate(45)" fill="#8b1a1a" opacity="0.7"/>
+    <ellipse rx="5" ry="9" transform="rotate(90)" fill="#8b1a1a" opacity="0.7"/>
+    <ellipse rx="5" ry="9" transform="rotate(135)" fill="#8b1a1a" opacity="0.7"/>
+  </g>
+  <!-- Leaves top -->
+  <ellipse cx="165" cy="28" rx="12" ry="6" fill="#2d6a2d" transform="rotate(-30 165 28)"/>
+  <ellipse cx="225" cy="28" rx="12" ry="6" fill="#2d6a2d" transform="rotate(30 225 28)"/>
+  <ellipse cx="148" cy="42" rx="10" ry="5" fill="#3a7a3a" transform="rotate(-50 148 42)"/>
+  <ellipse cx="242" cy="42" rx="10" ry="5" fill="#3a7a3a" transform="rotate(50 242 42)"/>
+  <!-- Side roses top -->
+  <g transform="translate(130, 36)">
+    <circle r="10" fill="#8b1a1a"/>
+    <circle r="6" fill="#cd5c5c"/>
+    <circle r="3" fill="#ffb6c1"/>
+  </g>
+  <g transform="translate(260, 36)">
+    <circle r="10" fill="#8b1a1a"/>
+    <circle r="6" fill="#cd5c5c"/>
+    <circle r="3" fill="#ffb6c1"/>
+  </g>
+  <!-- Vine lines top -->
+  <path d="M30 36 Q80 20 130 36" fill="none" stroke="#2d6a2d" stroke-width="1.5"/>
+  <path d="M260 36 Q310 20 360 36" fill="none" stroke="#2d6a2d" stroke-width="1.5"/>
+
+  <!-- Bottom floral decoration (mirror of top) -->
+  <g transform="translate(195, 564)">
+    <circle r="14" fill="#8b1a1a"/>
+    <circle r="10" fill="#a52a2a"/>
+    <circle r="6" fill="#cd5c5c"/>
+    <circle r="3" fill="#ffb6c1"/>
+    <ellipse rx="5" ry="9" transform="rotate(0)" fill="#8b1a1a" opacity="0.7"/>
+    <ellipse rx="5" ry="9" transform="rotate(45)" fill="#8b1a1a" opacity="0.7"/>
+    <ellipse rx="5" ry="9" transform="rotate(90)" fill="#8b1a1a" opacity="0.7"/>
+    <ellipse rx="5" ry="9" transform="rotate(135)" fill="#8b1a1a" opacity="0.7"/>
+  </g>
+  <ellipse cx="165" cy="572" rx="12" ry="6" fill="#2d6a2d" transform="rotate(30 165 572)"/>
+  <ellipse cx="225" cy="572" rx="12" ry="6" fill="#2d6a2d" transform="rotate(-30 225 572)"/>
+  <g transform="translate(130, 564)">
+    <circle r="10" fill="#8b1a1a"/>
+    <circle r="6" fill="#cd5c5c"/>
+    <circle r="3" fill="#ffb6c1"/>
+  </g>
+  <g transform="translate(260, 564)">
+    <circle r="10" fill="#8b1a1a"/>
+    <circle r="6" fill="#cd5c5c"/>
+    <circle r="3" fill="#ffb6c1"/>
+  </g>
+  <path d="M30 564 Q80 580 130 564" fill="none" stroke="#2d6a2d" stroke-width="1.5"/>
+  <path d="M260 564 Q310 580 360 564" fill="none" stroke="#2d6a2d" stroke-width="1.5"/>
+
+  <!-- Left side flowers -->
+  <g transform="translate(14, 150)"><circle r="8" fill="#8b1a1a"/><circle r="5" fill="#cd5c5c"/><circle r="2.5" fill="#ffb6c1"/></g>
+  <ellipse cx="14" cy="200" rx="5" ry="9" fill="#2d6a2d" transform="rotate(10 14 200)"/>
+  <g transform="translate(14, 250)"><circle r="8" fill="#daa520"/><circle r="5" fill="#ffd700"/><circle r="2.5" fill="#fffacd"/></g>
+  <ellipse cx="14" cy="300" rx="5" ry="9" fill="#2d6a2d" transform="rotate(-10 14 300)"/>
+  <g transform="translate(14, 350)"><circle r="8" fill="#8b1a1a"/><circle r="5" fill="#cd5c5c"/><circle r="2.5" fill="#ffb6c1"/></g>
+  <ellipse cx="14" cy="400" rx="5" ry="9" fill="#2d6a2d" transform="rotate(10 14 400)"/>
+  <g transform="translate(14, 450)"><circle r="8" fill="#daa520"/><circle r="5" fill="#ffd700"/><circle r="2.5" fill="#fffacd"/></g>
+
+  <!-- Right side flowers (mirror) -->
+  <g transform="translate(376, 150)"><circle r="8" fill="#daa520"/><circle r="5" fill="#ffd700"/><circle r="2.5" fill="#fffacd"/></g>
+  <ellipse cx="376" cy="200" rx="5" ry="9" fill="#2d6a2d" transform="rotate(-10 376 200)"/>
+  <g transform="translate(376, 250)"><circle r="8" fill="#8b1a1a"/><circle r="5" fill="#cd5c5c"/><circle r="2.5" fill="#ffb6c1"/></g>
+  <ellipse cx="376" cy="300" rx="5" ry="9" fill="#2d6a2d" transform="rotate(10 376 300)"/>
+  <g transform="translate(376, 350)"><circle r="8" fill="#daa520"/><circle r="5" fill="#ffd700"/><circle r="2.5" fill="#fffacd"/></g>
+  <ellipse cx="376" cy="400" rx="5" ry="9" fill="#2d6a2d" transform="rotate(-10 376 400)"/>
+  <g transform="translate(376, 450)"><circle r="8" fill="#8b1a1a"/><circle r="5" fill="#cd5c5c"/><circle r="2.5" fill="#ffb6c1"/></g>
+
+  <!-- Corner ornaments -->
+  <circle cx="14" cy="14" r="8" fill="#daa520"/>
+  <circle cx="14" cy="14" r="4" fill="#1a0a00"/>
+  <circle cx="376" cy="14" r="8" fill="#daa520"/>
+  <circle cx="376" cy="14" r="4" fill="#1a0a00"/>
+  <circle cx="14" cy="586" r="8" fill="#daa520"/>
+  <circle cx="14" cy="586" r="4" fill="#1a0a00"/>
+  <circle cx="376" cy="586" r="8" fill="#daa520"/>
+  <circle cx="376" cy="586" r="4" fill="#1a0a00"/>
+
+  <!-- Decorative divider line in top bar -->
+  <line x1="40" y1="54" x2="350" y2="54" stroke="#daa520" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Decorative divider in bottom bar -->
+  <line x1="40" y1="546" x2="350" y2="546" stroke="#daa520" stroke-width="0.5" opacity="0.5"/>
+</svg>

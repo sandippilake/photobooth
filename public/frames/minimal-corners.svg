@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 600" width="390" height="600">
+  <!-- Top-left corner -->
+  <path d="M0,80 L0,0 L80,0" fill="none" stroke="#1a1a2e" stroke-width="8"/>
+  <path d="M0,75 L0,5 L75,5" fill="none" stroke="#c9a96e" stroke-width="2"/>
+  <circle cx="0" cy="0" r="12" fill="#c9a96e"/>
+
+  <!-- Top-right corner -->
+  <path d="M310,0 L390,0 L390,80" fill="none" stroke="#1a1a2e" stroke-width="8"/>
+  <path d="M315,5 L385,5 L385,75" fill="none" stroke="#c9a96e" stroke-width="2"/>
+  <circle cx="390" cy="0" r="12" fill="#c9a96e"/>
+
+  <!-- Bottom-left corner -->
+  <path d="M0,520 L0,600 L80,600" fill="none" stroke="#1a1a2e" stroke-width="8"/>
+  <path d="M0,525 L0,595 L75,595" fill="none" stroke="#c9a96e" stroke-width="2"/>
+  <circle cx="0" cy="600" r="12" fill="#c9a96e"/>
+
+  <!-- Bottom-right corner -->
+  <path d="M310,600 L390,600 L390,520" fill="none" stroke="#1a1a2e" stroke-width="8"/>
+  <path d="M315,595 L385,595 L385,525" fill="none" stroke="#c9a96e" stroke-width="2"/>
+  <circle cx="390" cy="600" r="12" fill="#c9a96e"/>
+
+  <!-- Subtle bottom band -->
+  <rect x="0" y="530" width="390" height="70" fill="#1a1a2e" opacity="0.75"/>
+  <line x1="20" y1="534" x2="370" y2="534" stroke="#c9a96e" stroke-width="0.5"/>
+</svg>

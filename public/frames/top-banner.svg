@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 600" width="390" height="600">
+  <!-- Top banner -->
+  <rect x="0" y="0" width="390" height="90" fill="#0f3460"/>
+
+  <!-- Banner ribbon effect -->
+  <polygon points="0,90 0,75 15,90" fill="#e94560"/>
+  <polygon points="390,90 390,75 375,90" fill="#e94560"/>
+  <rect x="15" y="82" width="360" height="8" fill="#e94560"/>
+
+  <!-- Banner inner border -->
+  <rect x="8" y="8" width="374" height="74" fill="none" stroke="#e94560" stroke-width="1" opacity="0.5"/>
+
+  <!-- Decorative stars in banner -->
+  <g fill="#ffd700" opacity="0.6">
+    <polygon points="30,20 32,26 38,26 33,30 35,36 30,32 25,36 27,30 22,26 28,26" transform="scale(0.6) translate(20,14)"/>
+    <polygon points="360,20 362,26 368,26 363,30 365,36 360,32 355,36 357,30 352,26 358,26" transform="scale(0.6) translate(-170,14)"/>
+  </g>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="90" width="12" height="510" fill="#0f3460"/>
+  <rect x="10" y="90" width="3" height="510" fill="#e94560"/>
+
+  <!-- Right accent bar -->
+  <rect x="378" y="90" width="12" height="510" fill="#0f3460"/>
+  <rect x="377" y="90" width="3" height="510" fill="#e94560"/>
+
+  <!-- Bottom band -->
+  <rect x="0" y="530" width="390" height="70" fill="#0f3460"/>
+  <rect x="0" y="530" width="390" height="3" fill="#e94560"/>
+
+  <!-- Bottom decorative line -->
+  <line x1="20" y1="538" x2="370" y2="538" stroke="#e94560" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Dot accents on side bars -->
+  <circle cx="6" cy="150" r="3" fill="#e94560" opacity="0.6"/>
+  <circle cx="6" cy="220" r="3" fill="#ffd700" opacity="0.6"/>
+  <circle cx="6" cy="290" r="3" fill="#e94560" opacity="0.6"/>
+  <circle cx="6" cy="360" r="3" fill="#ffd700" opacity="0.6"/>
+  <circle cx="6" cy="430" r="3" fill="#e94560" opacity="0.6"/>
+  <circle cx="6" cy="500" r="3" fill="#ffd700" opacity="0.6"/>
+
+  <circle cx="384" cy="150" r="3" fill="#ffd700" opacity="0.6"/>
+  <circle cx="384" cy="220" r="3" fill="#e94560" opacity="0.6"/>
+  <circle cx="384" cy="290" r="3" fill="#ffd700" opacity="0.6"/>
+  <circle cx="384" cy="360" r="3" fill="#e94560" opacity="0.6"/>
+  <circle cx="384" cy="430" r="3" fill="#ffd700" opacity="0.6"/>
+  <circle cx="384" cy="500" r="3" fill="#e94560" opacity="0.6"/>
+</svg>

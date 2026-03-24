@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 600" width="390" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a8edea"/>
+      <stop offset="100%" stop-color="#fed6e3"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="390" height="600" fill="url(#bg)"/>
+  <!-- Floor -->
+  <rect y="430" width="390" height="170" fill="url(#floor)" opacity="0.6"/>
+  <!-- Body silhouette -->
+  <ellipse cx="195" cy="480" rx="90" ry="120" fill="rgba(0,0,0,0.25)"/>
+  <!-- Head -->
+  <circle cx="195" cy="210" r="70" fill="rgba(255,220,180,0.85)"/>
+  <!-- Hair -->
+  <ellipse cx="195" cy="175" rx="72" ry="45" fill="rgba(80,40,10,0.8)"/>
+  <!-- Neck -->
+  <rect x="177" y="275" width="36" height="40" fill="rgba(255,220,180,0.85)"/>
+  <!-- Shoulders / body -->
+  <path d="M100,320 Q130,300 195,295 Q260,300 290,320 L300,430 L90,430 Z" fill="rgba(60,80,160,0.7)"/>
+  <!-- Face details -->
+  <ellipse cx="178" cy="205" rx="8" ry="9" fill="rgba(50,30,10,0.7)"/>
+  <ellipse cx="212" cy="205" rx="8" ry="9" fill="rgba(50,30,10,0.7)"/>
+  <path d="M178,235 Q195,250 212,235" fill="none" stroke="rgba(150,60,60,0.8)" stroke-width="3" stroke-linecap="round"/>
+  <!-- Text overlay -->
+  <text x="195" y="560" text-anchor="middle" font-family="Arial" font-size="14" fill="rgba(255,255,255,0.5)">Sample photo</text>
+</svg>

@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 600" width="390" height="600">
+  <!-- Left vine bar -->
+  <rect x="0" y="0" width="22" height="600" fill="#2d5a27" opacity="0.9"/>
+
+  <!-- Right vine bar -->
+  <rect x="368" y="0" width="22" height="600" fill="#2d5a27" opacity="0.9"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="390" height="22" fill="#2d5a27" opacity="0.9"/>
+
+  <!-- Left flowers -->
+  <g fill="#e8a0b4">
+    <circle cx="11" cy="60" r="6"/>
+    <circle cx="5" cy="60" r="3.5"/><circle cx="17" cy="60" r="3.5"/>
+    <circle cx="11" cy="54" r="3.5"/><circle cx="11" cy="66" r="3.5"/>
+    <circle cx="11" cy="60" r="3" fill="#fff5f7"/>
+  </g>
+  <g fill="#e8a0b4">
+    <circle cx="11" cy="160" r="6"/>
+    <circle cx="5" cy="160" r="3.5"/><circle cx="17" cy="160" r="3.5"/>
+    <circle cx="11" cy="154" r="3.5"/><circle cx="11" cy="166" r="3.5"/>
+    <circle cx="11" cy="160" r="3" fill="#fff5f7"/>
+  </g>
+  <g fill="#f4c430">
+    <circle cx="11" cy="260" r="6"/>
+    <circle cx="5" cy="260" r="3.5"/><circle cx="17" cy="260" r="3.5"/>
+    <circle cx="11" cy="254" r="3.5"/><circle cx="11" cy="266" r="3.5"/>
+    <circle cx="11" cy="260" r="3" fill="#fffde7"/>
+  </g>
+  <g fill="#e8a0b4">
+    <circle cx="11" cy="360" r="6"/>
+    <circle cx="5" cy="360" r="3.5"/><circle cx="17" cy="360" r="3.5"/>
+    <circle cx="11" cy="354" r="3.5"/><circle cx="11" cy="366" r="3.5"/>
+    <circle cx="11" cy="360" r="3" fill="#fff5f7"/>
+  </g>
+  <g fill="#f4c430">
+    <circle cx="11" cy="460" r="6"/>
+    <circle cx="5" cy="460" r="3.5"/><circle cx="17" cy="460" r="3.5"/>
+    <circle cx="11" cy="454" r="3.5"/><circle cx="11" cy="466" r="3.5"/>
+    <circle cx="11" cy="460" r="3" fill="#fffde7"/>
+  </g>
+  <!-- Leaves between flowers -->
+  <ellipse cx="11" cy="110" rx="4" ry="8" fill="#4a8c42" transform="rotate(-15 11 110)"/>
+  <ellipse cx="11" cy="210" rx="4" ry="8" fill="#4a8c42" transform="rotate(15 11 210)"/>
+  <ellipse cx="11" cy="310" rx="4" ry="8" fill="#4a8c42" transform="rotate(-15 11 310)"/>
+  <ellipse cx="11" cy="410" rx="4" ry="8" fill="#4a8c42" transform="rotate(15 11 410)"/>
+  <ellipse cx="11" cy="510" rx="4" ry="8" fill="#4a8c42" transform="rotate(-15 11 510)"/>
+
+  <!-- Right flowers (mirror) -->
+  <g fill="#e8a0b4">
+    <circle cx="379" cy="60" r="6"/>
+    <circle cx="373" cy="60" r="3.5"/><circle cx="385" cy="60" r="3.5"/>
+    <circle cx="379" cy="54" r="3.5"/><circle cx="379" cy="66" r="3.5"/>
+    <circle cx="379" cy="60" r="3" fill="#fff5f7"/>
+  </g>
+  <g fill="#f4c430">
+    <circle cx="379" cy="160" r="6"/>
+    <circle cx="373" cy="160" r="3.5"/><circle cx="385" cy="160" r="3.5"/>
+    <circle cx="379" cy="154" r="3.5"/><circle cx="379" cy="166" r="3.5"/>
+    <circle cx="379" cy="160" r="3" fill="#fffde7"/>
+  </g>
+  <g fill="#e8a0b4">
+    <circle cx="379" cy="260" r="6"/>
+    <circle cx="373" cy="260" r="3.5"/><circle cx="385" cy="260" r="3.5"/>
+    <circle cx="379" cy="254" r="3.5"/><circle cx="379" cy="266" r="3.5"/>
+    <circle cx="379" cy="260" r="3" fill="#fff5f7"/>
+  </g>
+  <g fill="#f4c430">
+    <circle cx="379" cy="360" r="6"/>
+    <circle cx="373" cy="360" r="3.5"/><circle cx="385" cy="360" r="3.5"/>
+    <circle cx="379" cy="354" r="3.5"/><circle cx="379" cy="366" r="3.5"/>
+    <circle cx="379" cy="360" r="3" fill="#fffde7"/>
+  </g>
+  <g fill="#e8a0b4">
+    <circle cx="379" cy="460" r="6"/>
+    <circle cx="373" cy="460" r="3.5"/><circle cx="385" cy="460" r="3.5"/>
+    <circle cx="379" cy="454" r="3.5"/><circle cx="379" cy="466" r="3.5"/>
+    <circle cx="379" cy="460" r="3" fill="#fff5f7"/>
+  </g>
+  <ellipse cx="379" cy="110" rx="4" ry="8" fill="#4a8c42" transform="rotate(15 379 110)"/>
+  <ellipse cx="379" cy="210" rx="4" ry="8" fill="#4a8c42" transform="rotate(-15 379 210)"/>
+  <ellipse cx="379" cy="310" rx="4" ry="8" fill="#4a8c42" transform="rotate(15 379 310)"/>
+  <ellipse cx="379" cy="410" rx="4" ry="8" fill="#4a8c42" transform="rotate(-15 379 410)"/>
+  <ellipse cx="379" cy="510" rx="4" ry="8" fill="#4a8c42" transform="rotate(15 379 510)"/>
+
+  <!-- Top flowers -->
+  <g fill="#e8a0b4">
+    <circle cx="60" cy="11" r="6"/>
+    <circle cx="54" cy="11" r="3.5"/><circle cx="66" cy="11" r="3.5"/>
+    <circle cx="60" cy="5" r="3.5"/><circle cx="60" cy="17" r="3.5"/>
+    <circle cx="60" cy="11" r="3" fill="#fff5f7"/>
+  </g>
+  <g fill="#f4c430">
+    <circle cx="130" cy="11" r="6"/>
+    <circle cx="124" cy="11" r="3.5"/><circle cx="136" cy="11" r="3.5"/>
+    <circle cx="130" cy="5" r="3.5"/><circle cx="130" cy="17" r="3.5"/>
+    <circle cx="130" cy="11" r="3" fill="#fffde7"/>
+  </g>
+  <g fill="#e8a0b4">
+    <circle cx="195" cy="11" r="7"/>
+    <circle cx="187" cy="11" r="4"/><circle cx="203" cy="11" r="4"/>
+    <circle cx="195" cy="4" r="4"/><circle cx="195" cy="18" r="4"/>
+    <circle cx="195" cy="11" r="3.5" fill="#fff5f7"/>
+  </g>
+  <g fill="#f4c430">
+    <circle cx="260" cy="11" r="6"/>
+    <circle cx="254" cy="11" r="3.5"/><circle cx="266" cy="11" r="3.5"/>
+    <circle cx="260" cy="5" r="3.5"/><circle cx="260" cy="17" r="3.5"/>
+    <circle cx="260" cy="11" r="3" fill="#fffde7"/>
+  </g>
+  <g fill="#e8a0b4">
+    <circle cx="330" cy="11" r="6"/>
+    <circle cx="324" cy="11" r="3.5"/><circle cx="336" cy="11" r="3.5"/>
+    <circle cx="330" cy="5" r="3.5"/><circle cx="330" cy="17" r="3.5"/>
+    <circle cx="330" cy="11" r="3" fill="#fff5f7"/>
+  </g>
+
+  <!-- Bottom caption area -->
+  <rect x="0" y="510" width="390" height="90" fill="#2d5a27" opacity="0.88"/>
+  <rect x="0" y="510" width="390" height="2" fill="#4a8c42"/>
+  <line x1="30" y1="520" x2="360" y2="520" stroke="#4a8c42" stroke-width="0.5" opacity="0.5"/>
+</svg>
